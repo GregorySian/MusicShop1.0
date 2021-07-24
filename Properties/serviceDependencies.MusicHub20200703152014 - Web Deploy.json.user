@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-07-03T12:23:57.6009437Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "UniversityProject"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "076c8f91-c938-4127-8620-dcb91d0f948f"
+    }
+  }
+}

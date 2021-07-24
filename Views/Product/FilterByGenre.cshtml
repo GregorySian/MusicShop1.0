@@ -1,0 +1,37 @@
+﻿@model MusicHub.ViewModels.AlbumsListViewModel
+    <body>
+        @foreach (var a in Model.Albums)
+        {
+            <div class="container">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="caption">
+                            <div class="Album-Title">
+                                <h3>
+                                    <a asp-controller="Product" asp-action="Details" asp-route-id="@a.Id"> @a.Title</a>
+                                </h3>
+                            </div>
+                            <div class="Album">
+                                <div class="img-thumbnail">
+                                    <img src="@a.ImageUrl">
+                                    <div class="pull-right">
+                                        <h4>@a.Price.ToString("C")</h4>
+                                    </div>
+                                    <div class="align-content-around">
+                                        @Html.Partial("AddToCart", a)
+                                        @Html.Partial("AddWishlist", a)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        }
+        <div page-model="@Model.PaginationInfo" page-action="List" page-classes-enabled="true"
+             page-class="btn" page-class-normal="btn-secondary"
+             page-class-selected="btn-primary" class="btn-group pull-right m-1">
+        </div>
+    </body>

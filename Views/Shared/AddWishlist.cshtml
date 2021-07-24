@@ -1,0 +1,13 @@
+﻿@using MusicHub.Infrastructure;
+@model Album
+<form Id="@Model.Id" asp-action="AddToWishList"
+      asp-controller="Wishlist" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" name="returnUrl"
+           value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+    <span class="card-text p-1">
+        <button type="submit">
+            <i class="far fa-heart" style="float:left">Add Wishlist</i> 
+        </button>
+    </span>
+</form>

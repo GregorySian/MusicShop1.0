@@ -1,0 +1,15 @@
+﻿@model MusicHub.ViewModels.AlbumsListViewModel;
+
+@foreach (var p in Model.Albums)
+{
+    <div>
+        <h3>@p.Title</h3>
+        @p.Description
+        <h4>@p.Price.ToString("c")</h4>
+    </div>
+}
+<div page-model="@Model.PaginationInfo" page-action="List" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-secondary"
+     page-class-selected="btn-primary" page-url-category="@Model.CurrentGenre"
+     class="btn-group pull-right m-1">
+</div>

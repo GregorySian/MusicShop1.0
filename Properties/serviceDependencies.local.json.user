@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-05-24T18:24:05.3590902Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Name": "resourceGroup",
+      "Type": "resourceGroup",
+      "Value": "MusicHub20200703152014ResourceGroup"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "076c8f91-c938-4127-8620-dcb91d0f948f"
+    }
+  }
+}

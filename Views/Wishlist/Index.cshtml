@@ -1,0 +1,32 @@
+﻿@model MusicHub.ViewModels.WishlistIndexViewModel;
+
+<h2>Your Wishlist</h2>
+
+@foreach (var line in Model.Wishlist.Lines)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col span-1-of-3">
+                <div class="caption">
+                    <h3>
+                        <div class="Album-Title">
+                        <a asp-controller="StoreManager" asp-action="Details" asp-route-id="@line.Album.Id"> @line.Album.Title</a>
+                        </div>
+                    </h3>
+                    <div class="Album">
+                        <div class="img-thumbnail">
+                            <img src="@line.Album.ImageUrl">
+                            <div class="pull-right">
+                                <h4>@line.Album.Price</h4>
+                            </div>
+                        </div>
+                  </div>
+                    <form asp-action="RemoveFromWishlist" method="post">
+                        <input type="hidden" name="AlbumId" value="@line.Album.Id" />
+                        <button type="submit" class="btn btn=sm btn-danger">Remove From Wishlist</button>
+                    </form>
+            </div>
+         </div>
+    </div>
+</div>
+}

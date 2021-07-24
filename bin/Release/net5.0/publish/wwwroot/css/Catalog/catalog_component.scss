@@ -1,0 +1,40 @@
+﻿@import '../_variables.scss';
+
+.eshop-catalog {
+
+    $banner-height: 260px;
+
+    &-hero {
+        background-image: url($image-main_banner);
+        background-size: cover;
+        height: $banner-height;
+        width: 100%;
+    }
+
+    &-title {
+        position: relative;
+        top: $banner-height / 3.5;
+    }
+
+    $filter-height: 65px;
+
+    &-filters {
+        height: $filter-height;
+    }
+
+    $filter-padding: .5rem;
+
+
+    &-label {
+        display: inline-block;
+        position: relative;
+        z-index: 0;
+    }
+
+    &-send {
+        background-color: $color-secondary;
+        color: $color-foreground-brighter;
+        cursor: pointer;
+        font-size: $font-size-m;
+        margin-top: -$filter-padding * 3;
+        transition: all $animation-speed-default;

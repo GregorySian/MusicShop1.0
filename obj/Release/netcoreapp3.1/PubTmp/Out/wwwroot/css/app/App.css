@@ -1,0 +1,38 @@
+﻿.display-4 {
+     padding: 5px;
+     font-family: 'lato', 'Arial', sans-serif;
+     color: gold;
+}
+.subtitle {
+     display: inline-block;
+     padding-bottom: 50px;
+     color: goldenrod;
+}
+
+.pull-right {
+     text-align: center;
+}
+.caption {
+    display: inline-block;
+    padding-right: 9px;
+    margin: auto;
+}
+
+.Album {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.Album-Title {
+    font-size:0.8em;
+    padding-bottom: 2px;
+    margin: auto;
+    text-align: center;
+}
+   
+
+    .Album-Title a:hover {
+        border-bottom: 2px solid #cf6d17;
+    }
+  
+    

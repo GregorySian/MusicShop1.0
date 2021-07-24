@@ -1,0 +1,21 @@
+﻿
+@model Wishlist;
+@using MusicHub.Infrastructure;
+
+<div class="">
+    @if (Model.Lines.Count() > 0)
+    {
+    <small class="navbar-text">
+        <b>Your Wishlist</b>
+        @*@Model.Lines.Select(a => a.Album.Id);*@
+
+
+    </small>
+    }
+</div>
+
+<a class="btn btn-sm btn-secondary navbar-btn"
+   asp-controller="Wishlist" asp-action="Index"
+   asp-route-returnurl="your_wishlist">
+    <i class="far fa-heart"></i>
+</a>
