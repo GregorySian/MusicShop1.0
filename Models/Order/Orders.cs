@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using static MusicHub.Models.Cart.Cart;
@@ -29,13 +30,16 @@ namespace MusicHub.Models.Order
         [Required(ErrorMessage = "Please enter your Country")]
         public string Country { get; set; }
 
-        public string State { get; set; }
-
         public string ZipCode { get; set; }
 
         public bool Shipped { get; set; }
 
         public bool GiftWrap { get; set; }
 
+        public decimal Total { get; set;  }
+
+        public DateTime OrderDate { get; set;  }
+
+        public string Status { get; set; }
     }
 }

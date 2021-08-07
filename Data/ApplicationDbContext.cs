@@ -23,6 +23,5 @@ namespace MusicHub.Data
         //modelBuilder.Entity<Album>()
         //    .HasRequired(e => e.Genre)
         //    .WithMany(d => d.Albums);
-
     }
 }

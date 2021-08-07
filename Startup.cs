@@ -66,12 +66,12 @@ namespace MusicHub
                     {
                         facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
                         facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
-                    })
-                    .AddMicrosoftAccount(microsoftOptions =>
-                    {
-                        microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
-                        microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
                     });
+                    //.AddMicrosoftAccount(microsoftOptions =>
+                    //{
+                    //    microsoftOptions.ClientId = Configuration["Authentication:Microsoft:ClientId"];
+                    //    microsoftOptions.ClientSecret = Configuration["Authentication:Microsoft:ClientSecret"];
+                    //});
             services.AddApplicationInsightsTelemetry();
 
 

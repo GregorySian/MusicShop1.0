@@ -8,9 +8,8 @@
     <h1>Admin Panel</h1>
 </div>
 
-<form asp-controller="StoreManager" asp-action="Index">
+<form asp-controller="StoreManager" asp-action="Index" method="get">
     <p>
-
         <select asp-for="AlbumGenres" asp-items="Model.Genres">
             <option value="">All</option>
         </select>

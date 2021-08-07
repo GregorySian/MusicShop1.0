@@ -1,4 +1,6 @@
-﻿@model IEnumerable<Album>
+﻿@using Microsoft.ApplicationInsights
+@using Microsoft.AspNetCore.Http
+@model IEnumerable<Album>
 @{
     ViewData["Title"] = "Product Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -31,4 +33,9 @@
           </div>
         </div>
     }
+     <h3>Rating and Comments</h3>
+<table border="1" cellpadding="2" cellspacing="2">
+     if(@User.Identity.IsAuthenticated == "false"){
+     <a href="@Url.Action("Login","Account")">Login to post your comment</a>
+</table>
 </body>

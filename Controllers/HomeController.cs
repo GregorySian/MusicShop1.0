@@ -19,18 +19,35 @@ namespace MusicHub.Controllers
             _logger = logger;
             _albumRepository = albumRepository;
         }
-
-        public ViewResult Index()
+        [HttpGet]
+        public ActionResult Index(string searchString)
         {
 
             var albums = _albumRepository.Albums;
 
-            return View(albums);
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                albums = _albumRepository.Albums.Where(a => a.Title.Contains(searchString));
+                return RedirectToAction("Result", "Index");
+            }
+            else
+            {
+                return View(albums);
+            }
+
+          
         }
 
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+
+        
+        public ActionResult Result(string Album)
+        {
+            ViewBag.Message = Album;
             return View();
         }
 

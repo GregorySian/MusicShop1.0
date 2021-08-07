@@ -13,7 +13,7 @@ using MusicHub.ViewModels;
 
 namespace MusicHub.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
     public class StoreManagerController : Controller
     {
         private readonly ApplicationDbContext _dbContext;

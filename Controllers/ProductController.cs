@@ -19,6 +19,13 @@ namespace MusicHub.Controllers
         {
             _repository = repo;
         }
+
+        public IActionResult SearchIndex(string searchString)
+        {
+         
+            return View();
+        }
+      
       
 
         public IActionResult FilterByGenre(string genre, int productPage = 1)
@@ -62,6 +69,8 @@ namespace MusicHub.Controllers
             }
             return View(album);
         }
+
+       
     }
 
 }

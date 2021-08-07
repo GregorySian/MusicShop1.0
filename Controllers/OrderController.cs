@@ -49,6 +49,8 @@ namespace MusicHub.Controllers
             if (ModelState.IsValid)
             {
                 order.Lines = cart.Lines.ToArray();
+                order.Status = "pending";
+                order.OrderDate = System.DateTime.UtcNow;
                 repository.SaveOrder(order);
                 return RedirectToAction(nameof(Completed));
             }
